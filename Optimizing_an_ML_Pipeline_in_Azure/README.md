@@ -152,27 +152,37 @@ AutoMLConfig(
 Other parameters of AutoMLConfig includes:
 compute_target,validation_data,featurization,iterations and max_concurrent_iterations.
 
+**Best Model**
+
+VotingEnsemble was the best model selected by AutoML. This is the sum of predictions from other classification algorithms, e.g. LightGBMClassifier,XGBoostClassifier,LogisticRegression e.t.c voting used in voting. e.g. AutoML used 10 ML Algorithms to participate in VotingEnsemble, each with there ensemble weights and hyperparameters.
+
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
 
 **Accuracy**
 
 * HyperDrive
-bankmarketing_model version: 1
-	 Regularization Strength: : 0.008762655481935323
+bankmarketing_model version: 2
+	 Regularization Strength: : 0.00551584512091742
 	 Max iterations: : 100
 	 Accuracy : 0.9151239251390997
+	 AUC : 0.9269997696302712
 
 * AutoML
 automl_bankmarketing_model version: 1
 	 Training context : Auto ML
-	 AUC : 0.9478827682847509
-	 Accuracy : 0.9182094081942337
-The performace of AutoML is better even th
+     AUC : 0.9475641425618313
+	 Accuracy : 0.9176631259484067
+
+The performace of AutoML is better for both AUC and Accuracy metrics.
+
 **Architecture**
+
 AutoML Architecture is simpler when compared with HyperDrive. 
 * In HyperDrive, I have to do some Feature Engineering, Hyperparameter selection, Training and Tuning, but these steps are Automated with AutoML.
 * with AutoML, you can create hundreds of models a day,can get better model accuracy and deploy models faster.
+
+**Differences**
 
 * Reason for difference between AutoML and HyperDrive Architecture is that you need to fix several parameters in HyperDrive, while that is AutoML is already automated for several Machine learning algorithms.
 
@@ -183,6 +193,7 @@ AutoML Architecture is simpler when compared with HyperDrive.
   * Use Larger Search space
   * Use Grid Sampling to try every posible combinations of hyperparameters.
   * Try other Machine LearningAlgorithms and take the best.
+  
 **AutoML**
   * Increase the Experiment time out to choose the best algorithm. 
 * 
@@ -190,3 +201,6 @@ AutoML Architecture is simpler when compared with HyperDrive.
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
 **Image of cluster marked for deletion**
+
+
+![Delete Cluster](Delete_Cluster.png)

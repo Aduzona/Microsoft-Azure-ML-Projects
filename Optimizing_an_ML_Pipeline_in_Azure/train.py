@@ -57,8 +57,16 @@ def main():
     # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
     ### CREATE A TABULAR DATASET
-    from azureml.core import Dataset
-    ds = Dataset.Tabular.from_delimited_files(path="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv")
+    #from azureml.core import Dataset
+    from azureml.data.dataset_factory import TabularDatasetFactory
+
+    # Create TabularDataset using TabularDatasetFactory
+    # Data is available at: 
+    # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
+    ds =TabularDatasetFactory.from_delimited_files(path="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv")
+    
+
+    #ds = Dataset.Tabular.from_delimited_files(path="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv")
     
     x, y = clean_data(ds)
 
