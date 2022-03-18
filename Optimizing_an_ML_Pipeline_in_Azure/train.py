@@ -9,6 +9,7 @@ from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
+from sklearn.metrics import roc_auc_score
 
 def clean_data(data):
     # Dict for cleaning data
@@ -69,6 +70,12 @@ def main():
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
+
+    # calculate AUC
+    y_scores = model.predict_proba(x_test)
+    auc = roc_auc_score(y_test,y_scores[:,1])
+    #print('AUC: ' + str(auc))
+    run.log('AUC', np.float(auc))
 
     os.makedirs('outputs',exist_ok=True)
     joblib.dump(value=model, filename='outputs/bankmarketing_model.pkl')
