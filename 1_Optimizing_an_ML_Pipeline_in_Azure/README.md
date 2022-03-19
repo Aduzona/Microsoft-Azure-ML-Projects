@@ -195,12 +195,14 @@ AutoML Architecture is simpler when compared with HyperDrive.
   * Try other Machine LearningAlgorithms and take the best.
   
 **AutoML**
-  * Increase the Experiment time out to choose the best algorithm. 
-* 
+  * Increase the Experiment time out to choose the best algorithm.  
 
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
 **Image of cluster marked for deletion**
 
+```py
+training_cluster.delete()
+```
 
 ![Delete Cluster](Delete_Cluster.png)
