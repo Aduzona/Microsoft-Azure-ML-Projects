@@ -195,7 +195,6 @@ we took close to 1.4 seconds for all the request to go through. We are taking ab
 
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+Screen Recording of the screenshots
+[Screen Recording](https://youtu.be/uX7EQjdiKPU)
