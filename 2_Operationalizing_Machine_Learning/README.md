@@ -1,15 +1,18 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
+# Machine Learning Operations (MLOps)
 
+An Udacity Project part of the Machine Learning Engineer with Microsoft Azure Nanodegree program. This Project aimed at Operationalizing Machine Learning, by applying DevOps principles to Machine Learning, usually known as MLOPs. I will start by creating an ML model from the Bank Marketing dataset, from there I deploy the model, consume endpoint it and pipeline automation. it. 
 
-# Your Project Title Here
-
-This Project is aimed at Operationalizing Machine Learning, by applying DevOps principles to Machine Learning, usually known as MLOPs. I will start by creating an ML model from the Bank Marketing dataset, from there I deploy the model, consume endpoint it and pipeline automation. it. 
-
+The Models for the project was created with both Azure Machine Learning studio using *Automated ML* and Azure Machine Learning SDK for Python using [Notebooks](starter_files/aml-pipelines-with-automated-machine-learning-step.ipynb).
 
 ## Architectural Diagram
-*TODO*: Provide an architectual diagram of the project and give an introduction of each step. An architectural diagram is an image that helps visualize the flow of operations from start to finish. In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. For example, one stage for managing models could be "using Automated ML to determine the best model". 
+
+The Architectural Diagram provided below starts from Authentication and ends with Documentation.
+
 
 ![Project Flow](screenshots/1_Project_Flow.png)
+
+
+## Key Steps
 
 1.  Authentication
 2.  Automated ML Experiment
@@ -20,43 +23,51 @@ This Project is aimed at Operationalizing Machine Learning, by applying DevOps p
 7. Create and publish a pipeline
 8. Documentation
 
-
-
-## Key Steps
-*TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
-
-**Authentication**
+**1. Authentication**
 
 Starts by creating a Service Principal(SP) account which is a user role that helps to control scope of permissions. Here, SP is assigned to  access the "Bank-mkt" workspace.
+
+Here I used Git Bash which support Unix-based utilities on windows environment. It also supports Git command line experience.
+
+* az login is an azure command which logs you into azure.
+* Browser displays after authentication with *az login*
+* Create a Service Principal
+* Capture objectId using clientID
+* SP now has access to Bank-mkt workspace in Azure.
+
+Some key values in the image below are redacted for security reasons.
+
 ![Authentication](screenshots/2_Authentication.png)
 
-**Automated ML Experiment**
+**2. Automated ML Experiment**
 
-*  First clone starter files
+*  First clone starter files using terminal in Microsoft Machine Learning Studio via Notebooks.
 ![Clone](screenshots/3_Clone_Starter_files.png)
 
-* Dataset Registered
+* Dataset Registered in Datasets
 ![Dataset](screenshots/3_Dataset.png)
 
+* Create an AutoML Experiment in Azure Machine Learning Studio.
+  
 * Experiment Completed and Best Model
 
-The Best model for this experiment is VotingEnsemble
+After running AutoML, the Best model for this experiment is VotingEnsemble
 
 ![Experiment completed](screenshots/4_AutoML_Experiment_Complete.png)
 ![Model Selected](screenshots/5_Model_Selected.png)
 
-**Deploy the Best Model**
+**3. Deploy the Best Model**
 
 ![Deploy Best Model](screenshots/6_Deploy_Best_Model.png)
 ![Deployment Successful](screenshots/7_Model_Deployment_Successful.png)
 
-**Enable Logging**
+**4. Enable Logging**
 
 Enable Application Insights gives us information about how the deployed services is behaving.
 
 * Download Config file from Azure ML sdk
 
-![Download config file](screenshots/8_Download_config-file.png)
+![Download config file](screenshots/8_Download_config_file.png)
 
 config.json content
 
@@ -104,7 +115,7 @@ for line in logs.split('\n'):
 
 ![Check model performance](screenshots/11_App_insight_model_perf.png)
   
-**Swagger Documentation**
+**5. Swagger Documentation**
 
 Consume the deployed model using Swagger.
 Documentation is a core pillar of operations.
@@ -131,7 +142,7 @@ docker run -p 9000:8080 swaggerapi/swagger-ui
 
 ![Swagger Interactions](screenshots/13_Swagger_HTTP_API_model_.png)
 
-**Consume Model Endpoints**
+**6. Consume Model Endpoints**
 
 * Result
 
@@ -149,7 +160,7 @@ Out of the 10 request, no failed request.
 we took close to 1.4 seconds for all the request to go through. We are taking about 139.915 miliseconds per request.
 
 
-**Create, Publish and Consume a Pipeline**
+**7. Create, Publish and Consume a Pipeline**
 
 * Pipeline Created
 ![Pipeline Created](screenshots/16_Pipeline_Created.png)
