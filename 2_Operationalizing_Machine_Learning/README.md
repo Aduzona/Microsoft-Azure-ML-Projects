@@ -28,27 +28,27 @@ This Project is aimed at Operationalizing Machine Learning, by applying DevOps p
 **Authentication**
 
 Starts by creating a Service Principal(SP) account which is a user role that helps to control scope of permissions. Here, SP is assigned to  access the "Bank-mkt" workspace.
-![Authentication](2_Authentication.png)
+![Authentication](screenshots/2_Authentication.png)
 
 **Automated ML Experiment**
 
 *  First clone starter files
-![Clone](3_Clone_Starter_files.png)
+![Clone](screenshots/3_Clone_Starter_files.png)
 
 * Dataset Registered
-![Dataset](3_Dataset.png)
+![Dataset](screenshots/3_Dataset.png)
 
 * Experiment Completed and Best Model
 
 The Best model for this experiment is VotingEnsemble
 
-![Experiment completed](4_AutoML_Experiment_Complete.png)
-![Model Selected](5_Model_Selected.png)
+![Experiment completed](screenshots/4_AutoML_Experiment_Complete.png)
+![Model Selected](screenshots/5_Model_Selected.png)
 
 **Deploy the Best Model**
 
-![Deploy Best Model](6_Deploy_Best_Model.png)
-![Deployment Successful](7_Model_Deployment_Successful.png)
+![Deploy Best Model](screenshots/6_Deploy_Best_Model.png)
+![Deployment Successful](screenshots/7_Model_Deployment_Successful.png)
 
 **Enable Logging**
 
@@ -56,7 +56,7 @@ Enable Application Insights gives us information about how the deployed services
 
 * Download Config file from Azure ML sdk
 
-![Download config file](8_Download_config-file.png)
+![Download config file](screenshots/8_Download_config-file.png)
 
 config.json content
 
@@ -97,12 +97,12 @@ for line in logs.split('\n'):
 ```
 * Run logs.py file in the terminal to enable application insight
 
-![logs.py](9_run_logs_python_file.png)
+![logs.py](screenshots/9_run_logs_python_file.png)
 * Application insight enabled
 
-![App insight enabled](10_Application_insight Enabled.png)
+![App insight enabled](screenshots/10_Application_insight Enabled.png)
 
-![Check model performance](11_App_insight_model_perf.png)
+![Check model performance](screenshots/11_App_insight_model_perf.png)
   
 **Swagger Documentation**
 
@@ -125,17 +125,17 @@ docker run -p 9000:8080 swaggerapi/swagger-ui
 
 * run swagger.sh
 
-![bash_swagger_sh](12_bash_swagger_sh.png)
+![bash_swagger_sh](screenshots/12_bash_swagger_sh.png)
 
 * Swagger interactions
 
-![Swagger Interactions](13_Swagger_HTTP_API_model_.png)
+![Swagger Interactions](screenshots/13_Swagger_HTTP_API_model_.png)
 
 **Consume Model Endpoints**
 
 * Result
 
-![Consume Endpoint Result](14_Consume_Endpoint_result.png)
+![Consume Endpoint Result](screenshots/14_Consume_Endpoint_result.png)
 
 * Benchmark the endpoint
 
@@ -143,7 +143,7 @@ It is an acceptable performance measure or baseline.
 
 Send data.json 10 times and see performance numbers from azure.
 
-![Benchmark the endpoint](15_Benchmark_the_Endpoints.png)
+![Benchmark the endpoint](screenshots/15_Benchmark_the_Endpoints.png)
 
 Out of the 10 request, no failed request.
 we took close to 1.4 seconds for all the request to go through. We are taking about 139.915 miliseconds per request.
@@ -152,34 +152,34 @@ we took close to 1.4 seconds for all the request to go through. We are taking ab
 **Create, Publish and Consume a Pipeline**
 
 * Pipeline Created
-![Pipeline Created](16_Pipeline_Created.png)
+![Pipeline Created](screenshots/16_Pipeline_Created.png)
 
 * Publish Pipeline to enabel REST endpoint
-![Publish pipeline ML Studio](17_Publish_Pipeline_ML_Studio.png)
+![Publish pipeline ML Studio](screenshots/17_Publish_Pipeline_ML_Studio.png)
 
 * Verify Published Pipeline
-!(Verify Published Pipeline)(18_Verify_published_pipeline.png)
+!(Verify Published Pipeline)(screenshots/18_Verify_published_pipeline.png)
 
 * Publish Pipeline via Python SDK
-![Publish Pipeline via Python SDK](19_Publish_Pipeline_code.png)
+![Publish Pipeline via Python SDK](screenshots/19_Publish_Pipeline_code.png)
 
 * Verify if pipeline is published again
-![Pipeline Endpoint](20_Pipeline_Endpoint.png)
+![Pipeline Endpoint](screenshots/20_Pipeline_Endpoint.png)
 
 * Bankmarketing dataset with the AutoML module
-![Dataset with AutoML](21_Dataset_With_AutoML.png)
+![Dataset with AutoML](screenshots/21_Dataset_With_AutoML.png)
 
 * Pipeline rest endpoint created and Active
 
-![Pipeline Endpoint created and active](22_Pipeline_Rest_endpoint_created.png)
+![Pipeline Endpoint created and active](screenshots/22_Pipeline_Rest_endpoint_created.png)
 
-![Rest endpoint Status](23_Rest_Endpoint_Status_Active.png)
+![Rest endpoint Status](screenshots/23_Rest_Endpoint_Status_Active.png)
 * Run Detail Widget
-![Run Detail Widget](24_RunDetails_Widget.png)
+![Run Detail Widget](screenshots/24_RunDetails_Widget.png)
 
 * Show Scheduled run in experiment
 
-![Scheduled run in experiment](25_Show_Scheduled_run.png)
+![Scheduled run in experiment](screenshots/25_Show_Scheduled_run.png)
 
 
 
