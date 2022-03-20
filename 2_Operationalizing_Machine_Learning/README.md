@@ -9,7 +9,7 @@ This Project is aimed at Operationalizing Machine Learning, by applying DevOps p
 ## Architectural Diagram
 *TODO*: Provide an architectual diagram of the project and give an introduction of each step. An architectural diagram is an image that helps visualize the flow of operations from start to finish. In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. For example, one stage for managing models could be "using Automated ML to determine the best model". 
 
-![Project Flow](1_Project_Flow.png)
+![Project Flow](screenshots/1_Project_Flow.png)
 
 1.  Authentication
 2.  Automated ML Experiment
