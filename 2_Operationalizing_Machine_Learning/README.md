@@ -133,6 +133,56 @@ docker run -p 9000:8080 swaggerapi/swagger-ui
 
 **Consume Model Endpoints**
 
+* Result
+
+![Consume Endpoint Result](14_Consume_Endpoint_result.png)
+
+* Benchmark the endpoint
+
+It is an acceptable performance measure or baseline.
+
+Send data.json 10 times and see performance numbers from azure.
+
+![Benchmark the endpoint](15_Benchmark_the_Endpoints.png)
+
+Out of the 10 request, no failed request.
+we took close to 1.4 seconds for all the request to go through. We are taking about 139.915 miliseconds per request.
+
+
+**Create, Publish and Consume a Pipeline**
+
+* Pipeline Created
+![Pipeline Created](16_Pipeline_Created.png)
+
+* Publish Pipeline to enabel REST endpoint
+![Publish pipeline ML Studio](17_Publish_Pipeline_ML_Studio.png)
+
+* Verify Published Pipeline
+!(Verify Published Pipeline)(18_Verify_published_pipeline.png)
+
+* Publish Pipeline via Python SDK
+![Publish Pipeline via Python SDK](19_Publish_Pipeline_code.png)
+
+* Verify if pipeline is published again
+![Pipeline Endpoint](20_Pipeline_Endpoint.png)
+
+* Bankmarketing dataset with the AutoML module
+![Dataset with AutoML](21_Dataset_With_AutoML.png)
+
+* Pipeline rest endpoint created and Active
+
+![Pipeline Endpoint created and active](22_Pipeline_Rest_endpoint_created.png)
+
+![Rest endpoint Status](23_Rest_Endpoint_Status_Active.png)
+* Run Detail Widget
+![Run Detail Widget](24_RunDetails_Widget.png)
+
+* Show Scheduled run in experiment
+
+![Scheduled run in experiment](25_Show_Scheduled_run.png)
+
+
+
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
