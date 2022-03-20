@@ -196,5 +196,4 @@ we took close to 1.4 seconds for all the request to go through. We are taking ab
 
 ## Screen Recording
 
-Screen Recording of the screenshots
-[Screen Recording](https://youtu.be/uX7EQjdiKPU)
+[Screen Recording](https://youtu.be/uX7EQjdiKPU) of the screenshots.
