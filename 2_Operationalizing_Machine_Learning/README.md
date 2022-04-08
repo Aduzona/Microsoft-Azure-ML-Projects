@@ -127,6 +127,7 @@ Documentation is a core pillar of operations.
   * What are the endpoints
 * Easier and more confident interaction
 
+[Source: Udacity ML Engineer Azure](https://www.udacity.com/course/machine-learning-engineer-for-microsoft-azure-nanodegree--nd00333)
 
 ```sh
 #swagger.sh
@@ -196,4 +197,9 @@ we took close to 1.4 seconds for all the request to go through. We are taking ab
 
 ## Screen Recording
 
-[Screen Recording](https://youtu.be/uX7EQjdiKPU) of the screenshots.
+[Screen Recording](https://youtu.be/rvGBalYFrZI) of the screenshots.
+
+## References
+
+1. [Udacity ML Engineer Azure](https://www.udacity.com/course/machine-learning-engineer-for-microsoft-azure-nanodegree--nd00333)
+2. [Microsoft Learn](https://docs.microsoft.com/en-us/learn/paths/build-ai-solutions-with-azure-ml-service/)
